@@ -16,7 +16,7 @@ import uuid
 
 
 api = Blueprint('api', __name__)
-ACCESS_EXPIRES = timedelta(hours=24)
+
 
 @api.route('/usuarios_index', methods=['POST', 'GET'])
 def handle_usu_index():
@@ -48,22 +48,22 @@ def handle_del(usuario_id):
     if resevas_usr:
         for t in resevas_usr:
             Reservas.desactiva_by_id(t.id)
-            
+
     comentarios = Comentarios.get_by_usr(usuario_id)
     if comentarios:
         for c in comentarios:
             Comentarios.desactiva_by_id(c.id)
-           
+
     return jsonify(user), 200
 
 
 @api.route('/modifica_user/<int:usuario_id>', methods=['POST', 'GET'])
 @jwt_required()
 def handle_mod(usuario_id):
-   
+
     data = request.get_json()
     mod_user = Users.modifica_by_id(usuario_id, data)
-    #print(mod_user)
+    # print(mod_user)
     if (mod_user):
         return jsonify(mod_user), 200
     else:
@@ -76,9 +76,9 @@ def handle_foto(usuario_id):
     if request.method == 'POST':
         f = request.files['archivo']
         renom = uuid.uuid4()
-        archivo= "public/imgs/users/"+str(usuario_id)+"_"+str(renom)
+        archivo = "public/imgs/users/"+str(usuario_id)+"_"+str(renom)
         f.save(os.path.join(archivo))
-        img_bbdd="imgs/users/"+str(usuario_id)+"_"+str(renom)
+        img_bbdd = "imgs/users/"+str(usuario_id)+"_"+str(renom)
         foto_user = Users.foto_by_id(usuario_id, img_bbdd)
         return jsonify(foto_user), 200
     else:
@@ -95,22 +95,24 @@ def handle_new():
 @api.route('/login', methods=['POST', 'GET'])
 def login_user():
     data = request.get_json()
-    SECRET = os.getenv('FLASK_APP_KEY')  # variable ENV
     if not data:
         return jsonify({"error": 'Sin datos'}), 401
 
     user = Users.query.filter_by(email=data['email']).first()
     if user:
-        if user.activo==1:
+        if user.activo == 1:
             if check_password_hash(user.password, data['password']):
-                token = jwt.encode({'id': user.id, 'exp': datetime.datetime.utcnow(
-                ) + ACCESS_EXPIRES}, SECRET)
+                SECRET = os.getenv('FLASK_APP_KEY')  # variable ENV
+                token = jwt.encode(
+                    {'id': user.id}, SECRET, algorithm='HS256')
                 access_token = create_access_token(token)
-                return jsonify({"token": access_token, "userid":user.id}), 200
+
+                return jsonify({"token": access_token, "userid": user.id}), 200
             return jsonify({"error": 'Contraseña incorrecta'}), 401
         else:
             return jsonify({"error": 'No existe el usuario'}), 401
     return jsonify({"error": 'no_user'}), 401
+
 
 @api.route('/new_pass', methods=['POST', 'GET'])
 @jwt_required()
@@ -152,6 +154,7 @@ def handle_acti_user(user_id):
         return jsonify(all_act_user), 200
     return jsonify({"message": "Error al recuperar datos"}), 400
 
+
 @api.route('/actividades_index', methods=['POST', 'GET'])
 def handle_acti_index():
     act_ind = Actividades.act_index()
@@ -160,21 +163,22 @@ def handle_acti_index():
         return jsonify(all_act_index), 200
     return jsonify({"message": "Error al recuperar datos"}), 400
 
+
 @api.route('/new_act/<int:guia_id>', methods=['POST', 'GET'])
 @jwt_required()
 def new_act(guia_id):
-    
+
     if request.method == 'POST':
         if request.files:
             f = request.files['archivo']
             renom = uuid.uuid4()
-            archivo= "public/imgs/actividades/"+str(guia_id)+"_"+str(renom)
+            archivo = "public/imgs/actividades/"+str(guia_id)+"_"+str(renom)
             f.save(os.path.join(archivo))
-            img_bbdd="imgs/actividades/"+str(guia_id)+"_"+str(renom)
+            img_bbdd = "imgs/actividades/"+str(guia_id)+"_"+str(renom)
         else:
-            img_bbdd=""
-       
-        data={
+            img_bbdd = ""
+
+        data = {
             "nombre": request.form["nombre"],
             "descripcion": request.form["descripcion"],
             "precio": request.form["precio"],
@@ -182,13 +186,14 @@ def new_act(guia_id):
             "id_guia": guia_id,
             "ciudad": request.form["ciudad"],
             "foto": img_bbdd,
-            
+
         }
         new_act_guia = Actividades.new_act(guia_id, data)
-        
+
         return jsonify(new_act_guia), 200
     else:
         return jsonify("No POST"), 400
+
 
 @api.route('/modifica_act/<int:act_id>', methods=['POST', 'GET'])
 @jwt_required()
@@ -204,19 +209,21 @@ def act_foto(act_id, guia_id):
     if request.method == 'POST':
         f = request.files['ftAct']
         renom = uuid.uuid4()
-        archivo= "public/imgs/actividades/"+str(guia_id)+"_"+str(renom)
+        archivo = "public/imgs/actividades/"+str(guia_id)+"_"+str(renom)
         f.save(os.path.join(archivo))
-        img_bbdd="imgs/actividades/"+str(guia_id)+"_"+str(renom)
+        img_bbdd = "imgs/actividades/"+str(guia_id)+"_"+str(renom)
         foto_act = Actividades.foto_by_id(act_id, img_bbdd)
         return jsonify(foto_act), 200
     else:
         return jsonify("No POST"), 400
+
 
 @api.route('/desactiva_act/<int:act_id>', methods=['POST', 'GET'])
 @jwt_required()
 def act_del(act_id):
     user = Actividades.desactiva_by_id(act_id)
     return jsonify(user), 200
+
 
 @api.route('/search', methods=['POST', 'GET'])
 def search_act():
@@ -251,19 +258,22 @@ def handle_reser_user(user_id):
         return jsonify(all_reser_user), 200
     return jsonify({"message": "Error al recuperar datos"}), 400
 
+
 @api.route('/reserva_est/<int:estado>', methods=['POST', 'GET'])
 def reser_estado(estado):
     reser_est = Reservas.res_estado(estado)
     if reser_est:
-        all_reser_est= [Reservas.serialize() for Reservas in reser_est]
+        all_reser_est = [Reservas.serialize() for Reservas in reser_est]
         return jsonify(all_reser_est), 200
     return jsonify({"message": "Error al recuperar datos"}), 400
+
 
 @api.route('/reserva_canc/<int:id_reserva>', methods=['POST', 'GET'])
 @jwt_required()
 def reser_canc(id_reserva):
     reser_c = Reservas.desactiva_by_id(id_reserva)
     return jsonify(reser_c), 200
+
 
 @api.route('/reserva_new', methods=['POST', 'GET'])
 @jwt_required()
@@ -272,13 +282,15 @@ def res_nw():
     nw_res = Reservas.res_nueva(data)
     return jsonify(nw_res), 200
 
-#-------------------COMENTARIOS------------------
+# -------------------COMENTARIOS------------------
+
 
 @api.route('/comentarios/<int:comen_id>', methods=['POST', 'GET'])
 def handle_comen(comen_id):
     comentario = Comentarios.get_by_id(comen_id)
     the_comen = Comentarios.serialize(comentario)
     return jsonify(the_comen), 200
+
 
 @api.route('/comentarios_act/<int:id_actividad>', methods=['POST', 'GET'])
 def comen_act(id_actividad):
@@ -288,12 +300,14 @@ def comen_act(id_actividad):
         return jsonify(all_com_act), 200
     return jsonify({"message": "Error al recuperar datos"}), 400
 
+
 @api.route('/comen_new/<int:id_actividad>/<int:id_usuario>', methods=['POST', 'GET'])
 @jwt_required()
 def comen_nw(id_actividad, id_usuario):
     data = request.get_json()
     nw_comen = Comentarios.com_nuevo(id_actividad, id_usuario, data)
     return jsonify(nw_comen), 200
+
 
 @api.route('/desactiva_com/<int:comen_id>', methods=['POST', 'GET'])
 @jwt_required()

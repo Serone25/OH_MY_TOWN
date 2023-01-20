@@ -26,7 +26,8 @@ const getState = ({ getStore, getActions, setStore }) => {
           const data = await resp.json();
           return data;
         } catch (error) {
-          return false;
+          console.log(error)
+         
         }
       },
 
@@ -85,7 +86,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             return data;
           })
           .catch((error) => {
-            return "Hubo un problema con la petición Fetch:" + error.message;
+            console.log(error)
           });
       },
       logIn: () => {

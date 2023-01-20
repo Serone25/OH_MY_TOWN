@@ -32,10 +32,10 @@ export const Login = () => {
   let login = false;
   const onSubmit = async (data, e) => {
     e.preventDefault();
-    if (!isCaptcha) {
+    /*if (!isCaptcha) {
       setIsEmail("Debe verificar si es humano");
       return false;
-    }
+    }*/
     const url = "/api/login";
     const method = "POST";
     const head = { "Content-Type": "application/json" };

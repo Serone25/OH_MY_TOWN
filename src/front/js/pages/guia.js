@@ -44,6 +44,10 @@ export const Guia = () => {
   };
 
   const desactivaActividad = (acti) => {
+    setActividades("");
+    setIsLoading2(true);
+    setIsLoading3(true);
+
     const url = "/api/desactiva_act/" + acti;
     actions.dataFromAPI(url);
     setDesActi(!desActi);
@@ -117,6 +121,7 @@ export const Guia = () => {
     });
   };
   useEffect(() => {
+    console.log("está entrando en useeffect");
     if (token) {
       actions.logIn();
     }
@@ -247,7 +252,7 @@ export const Guia = () => {
                 <div className="card-body tarjeta_actividad_body">
                   <Link to={"/actividades/" + element.id}>
                     <h5 className="card-title tarjeta_actividad_nombre">
-                      {element.nombre}
+                    {element.id} {element.nombre}
                     </h5>
                   </Link>
                   <p className="card-text tarjeta_actividad_texto">
@@ -281,9 +286,7 @@ export const Guia = () => {
                       </button>
                       <button
                         className="col-4 mb-3 mx-auto mt-2 guia_boton_borrar"
-                        onClick={() => {
-                          desactivaActividad(element.id);
-                        }}
+                        onClick={() => desactivaActividad(element.id)}
                       >
                         Borrar
                       </button>
@@ -359,10 +362,7 @@ export const Guia = () => {
 
                     <div className="card-body tarjeta_actividad_body">
                       <h5 className="card-title tarjeta_actividad_nombre">
-                        RESERVA:{" "}
-                        
-                          {element.num_reserva}
-                        
+                        RESERVA: {element.num_reserva}
                         {element.estado == 2 ? (
                           <p className="card-text tarjeta_actividad_texto">
                             Esta reserva ha sido cancelada

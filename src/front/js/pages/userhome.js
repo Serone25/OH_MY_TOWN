@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"; // permite el manejo de formularios h
 
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import jwt_decode from 'jwt-decode';
 import opinion1 from "../../img/opinion1.jpg";
 
 import "../../styles/userhome.css";
@@ -37,9 +38,10 @@ export const UserHome = () => {
       headers: {'Authorization': 'Bearer '+token },
       redirect: "follow",
     };
+
     fetch(process.env.BACKEND_URL + "/api/foto_user/" + userid, requestOptions)
       .then((response) => response.text())
-      .then((result) => setActAvatar(!actAvatar))
+      .then((result) => {setActAvatar(!actAvatar); console.log(result)})
       .catch((error) => console.log("error", error));
   };
 
@@ -51,6 +53,13 @@ export const UserHome = () => {
         </div>
       );
     } else {
+      const now = Date.now();
+      const decoded = jwt_decode(token);
+      
+      const expirationDate = new Date(decoded.exp *1000);
+      console.log(expirationDate.getTime());
+      console.log(now)
+      console.log(now > expirationDate.getTime())
       actions.logIn();
     }
     const promesa = () => {
