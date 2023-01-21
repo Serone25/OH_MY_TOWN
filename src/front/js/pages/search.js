@@ -71,36 +71,53 @@ export const Search = () => {
 					/>
 				</div>
 					
-				<div className="container-fluid d-flex align-items-center justify-content-center flex-wrap contenedor_search">{tarea.map((element,index) =>
-					<Link to={"/actividades/"+ element.id}>
-						<div className="box">
-            				<div className="cuerpo">
-							
-                				<div className="imgContainer">
+				<div className="row row-cols-1 row-cols-md-3 g-4">{tarea.map((element,index) =>
+					<div key={element.id} className="col">
+						<div className="card h-100 search_carta">
+      						<div className="card-body search_carta_body">
+								<div>
+									<h5 className="card-title search_h5">{element.nombre}</h5>
+									<p className="card-text"><i className="far fa-clock pe-2"></i>{element.fecha}</p>
+								</div>
+      						</div>
+						<Link to={"/actividades/"+ element.id}>
+							<div className="">
+								<img className="img-fluid search_carta_imagen" src={process.env.BACKEND_URL + "/" + element.foto}
+									alt="" />
+							</div>
+						</Link>
+							<div className="" > {/*{`id${todo.id}`}*/}
+								<button className="btn p-md-1 my-2 search_carta_boton" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+									aria-expanded="false" aria-controls="collapseExample">Leer más
+								</button>
+								<div className="collapse" id={"collapseExample"}>
+									<div className="card card-body search_carta_parrafo">
+										{element.descripcion}
+									</div>
+								</div>
+								
+							</div>
+    					</div>,
+						{/*<div className="box">
+            				/*<div className="cuerpo">
+								<div className="imgContainer">
 									<div className = "titulo_container">
 										<h2 className="text-white fs-3">{element.nombre}</h2>
-										
 									</div>
 									<div>{parseFecha(element.fecha)}</div>
                     				<img src={process.env.BACKEND_URL + "/" + element.foto} alt=""/>
-									
 									<div className = "precio_container">
-									
 										<h2 className= "text-white fs-3">{element.precio}</h2>
-										
-										
 									</div>
-									
-                				</div>
+								</div>
                 				<div className="content d-flex flex-column align-items-center justify-content-center">
 									<div>
 										<h3 className="text-white fs-5">{element.ciudad}</h3>
 									</div>
                 				</div>
-            				</div>
-        				</div>
-					</Link>
-						
+							</div>
+						</div>*/}
+					</div>	
 				)}</div>
 			</div>
 		</div>

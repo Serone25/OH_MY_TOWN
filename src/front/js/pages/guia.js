@@ -281,7 +281,7 @@ export const Guia = () => {
                           id={"navLink" + element.id}
                           to={"/modifica_actividad/" + element.id}
                         >
-                          Modificar
+                          <span className="guia_boton_modificar_span">Modificar</span>
                         </Link>
                       </button>
                       <button

@@ -357,10 +357,14 @@ a:hover{
     cursor: default;
     opacity: .24;
 }
+.guia_boton_modificar_span{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 /***BOTON BORRAR***/
 
 .guia_boton_borrar {
-	width: 110px;
+	max-width: 30%;
 	height: 60px;
 	cursor: pointer;
     color: white;

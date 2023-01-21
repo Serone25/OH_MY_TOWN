@@ -440,6 +440,7 @@ export const Home = () => {
                     )}
                     
                   </div>
+                  {console.log(listaTareas)}
                   <div className="col-md-8">
                     <Link to={"/actividades/" + listaTareas[0].id}>
                       <div
