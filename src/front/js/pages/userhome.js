@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form"; // permite el manejo de formularios h
 
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import jwt_decode from 'jwt-decode';
 import opinion1 from "../../img/opinion1.jpg";
 
 import "../../styles/userhome.css";
@@ -12,12 +11,9 @@ import fondo3 from "../../img/fondo3.jpg";
 export const UserHome = () => {
   const { actions } = useContext(Context);
   const [isLoading, setIsLoading] = useState(true);
-
   const [listaUsuarios, setListaUsuarios] = useState([]);
   const [actAvatar, setActAvatar] = useState(false);
   const [pesoImgU, setPesoImgU] = useState();
-
-
   const userid = localStorage.getItem("userid");
   const token = localStorage.getItem("jwt-token");
   const {
@@ -53,13 +49,6 @@ export const UserHome = () => {
         </div>
       );
     } else {
-      const now = Date.now();
-      const decoded = jwt_decode(token);
-      
-      const expirationDate = new Date(decoded.exp *1000);
-      console.log(expirationDate.getTime());
-      console.log(now)
-      console.log(now > expirationDate.getTime())
       actions.logIn();
     }
     const promesa = () => {
