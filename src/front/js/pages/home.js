@@ -92,9 +92,6 @@ export const Home = () => {
               <div className="carousel-caption d-md-block">
                 <h5>DESCUBRE TU CIUDAD</h5>
                 <h1 className="display-1">NUEVOS VIAJES</h1>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
               </div>
             </div>
             <div className="carousel-item" data-bs-interval="3000">
@@ -106,9 +103,6 @@ export const Home = () => {
               <div className="carousel-caption d-md-block">
                 <h5>DESCUBRE TU CIUDAD</h5>
                 <h1 className="display-1">NUEVAS AVENTURAS</h1>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
               </div>
             </div>
             <div className="carousel-item" data-bs-interval="3000">
@@ -120,9 +114,6 @@ export const Home = () => {
               <div className="carousel-caption d-md-block">
                 <h5>DESCUBRE TU CIUDAD</h5>
                 <h1 className="display-1">NUEVAS EXPERIENCIAS</h1>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
               </div>
             </div>
           </div>

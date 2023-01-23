@@ -10,16 +10,25 @@
     padding-top: 50px;
     font-weight: 600;
     color: #9C2C77;
+    font-size: 80px;
 }
 .actividad_ciudad{
-    padding-bottom: 50px;
+    color: #9C2C77;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    font-size:30px;
     
 }
 .actividad_descripcion{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    color: white;
 }
 .actividad_precio{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color:#CD104D;
+    text-shadow:  2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 .actividad_guia{
     color:#9C2C77;

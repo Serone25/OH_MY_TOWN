@@ -429,7 +429,7 @@ a:hover{
     
     color:#ffffff34;
     background-size: 10%;
-    -webkit-background-clip: text;
+    background-clip: text;
     animation-name: brillo;
     animation-duration: 3s;
     animation-iteration-count: infinite;
