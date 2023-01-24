@@ -16,15 +16,15 @@
 }
 
 .stickyheader {
-    background-color: rgba(253, 132, 31, 0.7);
+    background-color: rgba(253, 132, 31, 0.5);
     z-index: 9999;
     border-bottom: 1px solid transparent;
 }
 
 .changeColor {
-    color: #9C2C77;
+    color: black;
 }
 
 .changeColor:hover {
-    color:#E14D2A;
+    color:black;
 }

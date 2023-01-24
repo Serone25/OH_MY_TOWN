@@ -14,6 +14,7 @@ import { BsSearch } from "react-icons/bs";
 import "../../styles/navbar.css";
 import logo from "../../img/OMT1.png";
 import logo2 from "../../img/logo2.png"
+import { IconContext } from "react-icons";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
@@ -99,7 +100,6 @@ export const Navbar = () => {
                   </span>
                 </Link>
               </div>
-              
               <div className="col-2"></div>
             </nav>
           </div>
