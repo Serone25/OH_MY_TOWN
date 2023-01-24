@@ -1,5 +1,5 @@
 .nuevoComentario_body{
-    padding-top: 200px;
+    padding-top: 120px;
     text-align: center;
     height: 90vh;
     width: 100%;
@@ -11,11 +11,9 @@
 }
   
 .nuevoComentario_encabezado{
-    color: white;
-    padding-top: 25px;
-    font-size: 35px;
-    font-weight: 400;
-    letter-spacing: 2px;
+    color: #E14D2A;
+    font-size: 60px;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 .nuevoComentario_input{
@@ -27,17 +25,16 @@
     border-style: none;
 }
 ::placeholder{
-    color:#9C2C77;
+    color:#E14D2A;
 }
 .nuevoComentario_icono_comentario{
     position: absolute;
     padding-left: 10px;
     padding-top: 10px;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
 }
 .nuevoComentario_areatexto{
-    background-image: linear-gradient(to right, #f19721, rgba(201, 111, 9, 0.322));
-    color:white;
-    width: 95%;
+    color:black;
+    width: 100%;
 }

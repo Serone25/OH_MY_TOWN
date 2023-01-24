@@ -194,6 +194,12 @@
 .actividades:hover.actividades h5 {
   color: #fff;
 }
+.actividades:hover.actividades h6 {
+  color: #fff;
+}
+.actividades:hover.actividades p {
+  color: #fff;
+}
 
 /*FIN ACTIVIDADES DESTACADAS*/
 

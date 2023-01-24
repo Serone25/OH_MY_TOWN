@@ -34,7 +34,7 @@ export const Reservas = (props) => {
   useEffect(() => {
     if (!token) {
       return (
-        <div className="reservas_body" style={{ backgroundImage: `url(${fondo3})`, backgroundSize: `cover` }}>
+        <div className="reservas_body" style={{ backgroundColor:"#fdefbc"}}>
           <h1 className="bg-danger">No está autorizado</h1>
         </div>
       );
@@ -54,14 +54,14 @@ export const Reservas = (props) => {
 
   if (isLoading) {
     return (
-      <div className="reservas_body" style={{ backgroundImage: `url(${fondo3})`, backgroundSize: `cover` }}>
+      <div className="reservas_body" style={{ backgroundColor:"#fdefbc"}}>
         <h1>Cargando...</h1>
       </div>
     );
   }
 
   return (
-    <div className="reservas_body" style={{ backgroundImage: `url(${fondo3})`, backgroundSize: `cover` }}>
+    <div className="reservas_body" style={{ backgroundColor:"#fdefbc"}}>
       <h1 className="reservas_header">MIS RESERVAS</h1>
       <div className="container">
         <div className="row row-cols-1 row-cols-md-3 g-4 pb-5 container">
@@ -104,7 +104,7 @@ export const Reservas = (props) => {
                           <div>Cancelar reserva</div>
                         </Link>
                       </button>
-                      <button className="col  mx-4 reservas_boton_comentar">
+                      <button className="col  mx-4 reservas_boton_cancelar">
                         <Link
                           id={"navLink" + element.id}
                           to={"/comenta_actividad/" + element.obj_actividad.id}

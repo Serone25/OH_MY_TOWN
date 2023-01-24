@@ -46,13 +46,13 @@ export const NuevoComentario = () => {
   };
 
   return (
-    <div className="nuevoComentario_body" style={{ backgroundImage: `url(${fondo2})` }}>
+    <div className="nuevoComentario_body" style={{ backgroundColor:"#fce38a" }}>
       <div
-        className="container signup_espacio border border-white rounded px-0"
+        className="container signup_espacio rounded px-0"
         style={{
           height: "auto",
           width: "400px",
-          backgroundImage: `url(${fondo2})`,
+          backgroundColor:"#fce38a",
         }}
       >
         <form className="nuevoComentario_form" onSubmit={handleSubmit(onSubmit)}>
@@ -60,12 +60,16 @@ export const NuevoComentario = () => {
 
           <div id="input_username" className="nuevoComentario_comentario">
             <i className="fas fa-comment nuevoComentario_icono_comentario"></i>
-            <textarea className="ps-5 nuevoComentario_areatexto" rows="10" cols="30"
+            <textarea className="ps-5 nuevoComentario_areatexto" rows="10" cols="50"
               {...register("texto", { required: true })} //crear el name del input y requerido react-hook-form
             />
           </div>
-          <div id="input_btn" className="container login_button_body px-0">
-            <button className="login_button px-0" type="submit">
+          <div id="input_btn" className="pt-3">
+            <button className="userhome_home" type="submit">
+              <div className="userhome_iconos">
+                <i className="fas fa-pen userhome_icono_default"></i>
+                <i className="fas fa-check userhome_icono_hover"></i>
+              </div>
               {" "}
               COMENTAR
             </button>

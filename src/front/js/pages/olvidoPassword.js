@@ -4,7 +4,7 @@ import "../../styles/login.css";
 import { Link } from "react-router-dom";
 
 import fondo2 from "../../img/fondo2.jpg";
-import { FaUserCircle } from "react-icons/fa";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 import { useForm } from "react-hook-form"; // permite el manejo de formularios https://www.npmjs.com/package/react-hook-form
 import HCaptcha from "@hcaptcha/react-hcaptcha";
@@ -55,19 +55,20 @@ export const OlvidoPassword = () => {
   };
 
   return (
-    <div className="login-body" style={{ backgroundImage: `url(${fondo2})` }}>
+    <div className="login-body" style={{ backgroundColor:"#fdefbc",height:"90vh" }}>
+      <h1 className="modificaActividad_header mb-4">Recupera tu contraseña</h1>
       <div
         className="container login_espacio border border-white rounded px-0"
         style={{
-          height: "400px",
-          width: "400px",
-          backgroundImage: `url(${fondo2})`,
+          height: "auto",
+          width: "470px",
+          backgroundColor:"#fce38a",
         }}
       >
         
         <form className="login_form" onSubmit={handleSubmit(onSubmit)}>
           <h1 className="login_icon">
-            <FaUserCircle color="white" fontSize="2.5em" />
+            <RiLockPasswordFill color="#E14D2A" fontSize="2.5em" />
           </h1>
           <div>
             <HCaptcha sitekey={process.env.HCAPTCHA} onVerify={onVerify} />
@@ -77,7 +78,7 @@ export const OlvidoPassword = () => {
           </div>
           {nwpass ? <div><h6>Contraseña enviada</h6></div> : ""}
           <div className="login_email">
-            <i className="fa fa-user login_icono_email"></i>
+            <i className="fa fa-envelope login_icono_email"></i>
             <input
               className="login_input"
               type="text"
@@ -93,7 +94,11 @@ export const OlvidoPassword = () => {
           <p></p>
 
           <div className="container login_button_body px-0">
-            <button className="login_button px-0" type="submit">
+            <button className="userhome_home mt-3" type="submit">
+              <div className="userhome_iconos">
+                <i className="fas fa-lock userhome_icono_default"></i>
+                <i className="fas fa-lock-open userhome_icono_hover"></i>
+              </div>
               Recuperar contraseña
             </button>
           </div>

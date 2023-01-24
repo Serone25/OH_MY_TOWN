@@ -21,7 +21,9 @@ export const BajaUsuario= () => {
     }, [])
 
     return (
-        <div className="login-body"><h1>Te has dado de baja</h1></div>
+        <div className="login-body" style={{backgroundColor:"#fce38a"}}>
+            <h1 className="userhome_h1">Te has dado de baja</h1>
+        </div>
     )
 }
 

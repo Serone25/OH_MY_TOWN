@@ -6,7 +6,7 @@
     padding-bottom: 17vh;
 }
 .modifica_usuario_header{
-    color: #9C2C77; 
+    color: #E14D2A; 
      
     font-size: 60px; 
     font-weight: 800; 
@@ -17,6 +17,7 @@
     height: auto;
 }
 .modifica_usuario_input{
+    width: 450px;
     height:50px;
     text-align: center;
     font-size: 25px;
@@ -25,40 +26,40 @@
     margin-top: 10px;
 }
 ::placeholder{
-    color:#9C2C77;
+    color:#E14D2A;
 }
 .modifica_usuario_icono_email{
     position: absolute;
     padding-left: 25px;
     padding-top: 25px;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
 }
 .modifica_usuario_icono_password{
     position: absolute;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
     padding-left: 27px;
     padding-top: 22px;
 }
 .modifica_usuario_icono_nombre{
     position: absolute;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
     padding-left: 27px;
     padding-top: 22px;
 }
 .modifica_usuario_icono_apellidos{
     position: absolute;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
     padding-left: 27px;
     padding-top: 24px;
 }
 .modifica_usuario_icono_ciudad{
     position: absolute;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
     padding-left: 30px;
     padding-top: 24px;
 }
@@ -66,7 +67,7 @@
     font-size: 25px;
     font-weight: 800;
     text-transform: uppercase;
-    color:#9C2C77;
+    color:#E14D2A;
 }
 .modifica_usuario_check{
     margin-left: 15px;
@@ -77,14 +78,14 @@
 .modifica_usuario_icono_descripcion{
     position: absolute;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
     padding-left: 5px;
     padding-top: 5px;
 }
 .modifica_usuario_boton{
     position: relative;
     width: 64%;
-    background-image: linear-gradient(to bottom, #9C2C77, rgba(201, 9, 89, 0.322));
+    background-image: linear-gradient(to bottom, #E14D2A, rgba(240, 115, 6, 0.473));
     color: white;
     font-size: 30px;
     border:none;

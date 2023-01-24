@@ -18,7 +18,7 @@ export const Help = () => {
 		
 	  }, []);
 	return (
-		<div className= "help_body" style={{backgroundImage: `url(${fondo})`}}>
+		<div className= "help_body" style={{backgroundColor:"#fdefbc"}}>
 			<div className= "container">
 				<h1 className="rotulo_principal">NOS ENCANTAN LAS</h1>
 				<h1 className="rotulo_principal mb-5"><span className="experiencias">NUEVAS EXPERIENCIAS...</span></h1>

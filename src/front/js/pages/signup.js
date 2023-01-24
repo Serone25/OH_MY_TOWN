@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form"; // permite el manejo de formularios h
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 import "../../styles/signup.css";
+import { FaRegEdit } from "react-icons/fa";
 import fondo2 from "../../img/fondo2.jpg";
 import { element } from "prop-types";
 
@@ -57,18 +58,21 @@ export const FormSignup = () => {
   };
 
   return (
-    <div className="signup-body" style={{ backgroundImage: `url(${fondo2})` }}>
+    <div className="signup-body" style={{ backgroundColor:"#fdefbc" }}>
+      <h1 className="modificaActividad_header mb-4">Registro</h1>
       <div
-        className="container signup_espacio border border-white rounded px-0"
+        className="container signup_espacio rounded px-0"
         style={{
           height: "auto",
-          maxWidth: "400px",
-          backgroundImage: `url(${fondo2})`,
+          width: "470px",
+          backgroundColor:"#fce38a",
         }}
       >
         <form className="signup_form" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="sign_up_encabezado">REGISTRO</h2>
           <div>
+          <h1 className="login_icon">
+            <FaRegEdit color="#E14D2A" fontSize="2.5em" />
+          </h1>
             <HCaptcha
               sitekey={process.env.HCAPTCHA}
               onVerify={onVerify}
@@ -127,7 +131,11 @@ export const FormSignup = () => {
             )}
           </div>
           <div id="input_btn" className="container login_button_body px-0">
-            <button className="login_button px-0" type="submit">
+            <button className="userhome_home mt-3" type="submit">
+              <div className="userhome_iconos">
+                <i className="fas fa-edit userhome_icono_default"></i>
+                <i className="fas fa-check userhome_icono_hover"></i>
+              </div>
               {" "}
               REGISTRARME
             </button>

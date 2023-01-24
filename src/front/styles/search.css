@@ -12,13 +12,13 @@
     margin-bottom: 60px;
 }
 .barra_search_encabezado{
-    color: white;
+    color: #FD841F;
     font-size: 50px;
     padding-bottom: 15px;
     margin-bottom: 30px;
 }
 .barra_search_viajar{
-    color:#9C2C77;
+    color:#E14D2A;
     font-size: 55px;
 }
 .containerInput{
@@ -38,7 +38,7 @@
     padding-left: 32px;
     padding-top: 14px;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
 }
 .search_field{
   margin-top: 60px; 
@@ -51,11 +51,16 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 900;
-    color:#9C2C77;
-    font-size: 25px;
+    color:#E14D2A;
+    font-size: 30px;
 }
 .search_carta{
-    background-color: #FFF980;
+    background-color: #FFE15D;
+}
+.search_fecha{
+    color:#E14D2A;
+    font-size:20px;
+    font-weight: 600;
 }
 .search_carta_body{
     padding:5px;
@@ -64,7 +69,7 @@
     width: 80%;
 }
 .search_carta_boton{
-    border-color: #9C2C77;
+    border-color: #E14D2A;
     background-color: #FD841F;
 }
 .search_carta_parrafo{

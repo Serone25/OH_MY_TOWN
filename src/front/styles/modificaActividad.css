@@ -5,7 +5,7 @@
     width: 100%;
   }
   .modificaActividad_header{
-    color: #9C2C77; 
+    color: #E14D2A; 
      
     font-size: 60px; 
     font-weight: 800; 
@@ -30,29 +30,30 @@
 }
 .modificaActividad_input{
     margin-top: 20px;
+    width: 450px;
     height:50px;
     text-align: center;
     font-size: 25px;
     border-radius: 25px;
     border-style: none;
-    color:#9C2C77;
+    color:#E14D2A;;
 }
 ::placeholder{
-    color:#9C2C77;
+    color:#E14D2A;;
 }
 .modificaActividad_icono_nombre{
     position: absolute;
     padding-left: 32px;
     padding-top: 35px;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;;
 }
 .modificaActividad_icono_descripcion{
     position: absolute;
     padding-left: 10px;
     padding-top: 10px;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;;
 }
 .modificaActividad_boton_modificar_contenedor{
     position: relative;
@@ -66,7 +67,7 @@
 .modificaActividad_boton_modificar{
     position: relative;
     width: 80%;
-    background-image: linear-gradient(to bottom, #9C2C77, rgba(201, 9, 89, 0.322));
+    background-image: linear-gradient(to bottom, #E14D2A, rgba(240, 115, 6, 0.473));
     color: white;
     font-size: 30px;
     border:none;

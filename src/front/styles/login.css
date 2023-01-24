@@ -1,5 +1,5 @@
 .login-body{
-    padding-top: 200px;
+    padding-top: 120px;
     text-align: center;
     height: 100%;
     width: 100%;
@@ -15,10 +15,8 @@
     padding-top: 30px;
     padding-bottom: 15px;
 }
-.login_email{
-
-}
 .login_input{
+    width: 450px;
     height:50px;
     text-align: center;
     font-size: 25px;
@@ -26,19 +24,19 @@
     border-style: none;
 }
 ::placeholder{
-    color:#9C2C77;
+    color:#E14D2A;
 }
 .login_icono_email{
     position: absolute;
     padding-left: 32px;
     padding-top: 10px;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
 }
 .login_icono_password{
     position: absolute;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
     padding-left: 32px;
     padding-top: 10px;
 }
@@ -64,8 +62,8 @@
     font-size: 15px;
 }
 .login_registro_link{
-    font-size: 20px;
-    color: #9C2C77;
+    font-size: 25px;
+    color: #E14D2A;
     font-weight: bold;
 }
 .signup_password_coincide{
@@ -76,4 +74,8 @@
     color: red;
     font-weight: 800;
     text-transform: uppercase;
+}
+.login_texto{
+    font-size: 20px;
+    font-weight: 600;
 }

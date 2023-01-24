@@ -112,7 +112,7 @@ export const ModificaActividad = () => {
   };
   if (isLoading) {
     return (
-      <div className="modificaActividad_body" style={{ backgroundImage: `url(${fondo5})`,backgroundSize:`cover`}}>
+      <div className="modificaActividad_body" style={{ backgroundColor:"#fce38a"}}>
         <h1>Cargando...</h1>
       </div>
     );
@@ -120,14 +120,14 @@ export const ModificaActividad = () => {
 
   if (!token) {
     return (
-      <div className="modificaActividad_body" style={{ backgroundImage: `url(${fondo5})`,backgroundSize:`cover`}}>
+      <div className="modificaActividad_body" style={{ backgroundColor:"#fce38a"}}>
         <h1 className="bg-danger">No está autorizado</h1>
       </div>
     );
   } else {
     return (
       <>
-        <div className="modificaActividad_body" style={{ backgroundImage: `url(${fondo5})`,backgroundSize:`cover`}}>
+        <div className="modificaActividad_body" style={{ backgroundColor:"#fce38a"}}>
           <form className="modificaActividad_formulario" onSubmit={handleSubmit(onSubmit)}>
             <h1 className="modificaActividad_header">¡Modifica tu actividad!</h1>
             {dataActividad.ids_usuarios !== "" ? (

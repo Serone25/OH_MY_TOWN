@@ -74,7 +74,7 @@ export const UserHome = () => {
     return (
       <div
         className="userhome_body_rellena_perfil"
-        style={{ backgroundImage: `url(${fondo3})` }}
+        style={{ backgroundColor:"#fdefbc" }}
       >
         <div className="container">
           <div>
@@ -100,107 +100,115 @@ export const UserHome = () => {
     <>
       <div
         className="userhome_body"
-        style={{ backgroundImage: `url(${fondo3})`, backgroundSize: `cover` }}
+        style={{ backgroundColor:"#fdefbc"}}
       >
-        <div>
-          <h1 className="userhome_h1">¡Bienvenid@ de nuevo!</h1>
-        </div>
-        <div className="container row justify-content-center">
-          <div className="col-4 ps-5">
-            {listaUsuarios.foto ? (
-              <img
-                src={process.env.BACKEND_URL + "/" + listaUsuarios.foto}
-                className="card-img-top userhome_imagen"
-                alt="..."
-              />
-            ) : (
-              <img
-                src={opinion1}
-                className="card-img-top userhome_imagen"
-                alt="..."
-              />
-            )}
-            <form>
-              <div className="file-select" id="src-file1">
-                <input
-                  onChange={() => {
-                    subeFotoUsr(handleSubmit);
-                  }}
-                  type="file"
-                  id="customFile1"
-                  name="archivo"
-                  accept=".jpg, .png"
-                />
-              </div>
-              <div><span className="signup_email_valido">{pesoImgU}</span></div>
-            </form>
+        <div className="flex-container">
+          <div>
+            <h1 className="userhome_h1">¡Bienvenid@ de nuevo!</h1>
           </div>
-          <div className="col-4 ps-3 text-start">
-            <h3 className="userhome_headers">Nombre:</h3>
-            <p className="userhome_parrafos">
-              {listaUsuarios.nombre} {listaUsuarios.apellidos}
-            </p>
-            <h3 className="userhome_headers">Email:</h3>
-            <p className="userhome_parrafos">{listaUsuarios.email}</p>
-            <h3 className="userhome_headers">Ciudad:</h3>
-            <p className="userhome_parrafos">{listaUsuarios.ciudad}</p>
-            <h3 className="userhome_headers">Descripcion:</h3>
-            <p className="userhome_parrafos">{listaUsuarios.descripcion}</p>
-          </div>
-        </div>
-        <div className="userhome_modifica_datos">
-          <div className="container row justify-content-center mb-3">
-            {listaUsuarios.tipo == 1 ? (
-              <>
-                <div className="col">
-                  <Link to={"/guia/" + userid}>
-                    <button className="userhome_home">
-                      <div className="userhome_iconos">
-                        <i className="fas fa-suitcase-rolling userhome_icono_default"></i>
-                        <i className="fas fa-plane-departure userhome_icono_hover"></i>
+          <div className="container">
+              <div className="card mb-5" style={{ backgroundColor:"#fdefbc", border:"none" }}>
+                <div className="row g-0">
+                  <div className="col-md-4">
+                    {listaUsuarios.foto ? (
+                      <img
+                        src={process.env.BACKEND_URL + "/" + listaUsuarios.foto}
+                        className="card-img-top userhome_imagen"
+                        alt="..."
+                      />
+                    ) : (
+                      <img
+                        src={opinion1}
+                        className="card-img-top userhome_imagen"
+                        alt="..."
+                      />
+                    )}
+                    <form>
+                      <div className="file-select" id="src-file1">
+                        <input
+                          onChange={() => {
+                            subeFotoUsr(handleSubmit);
+                          }}
+                          type="file"
+                          id="customFile1"
+                          name="archivo"
+                          accept=".jpg, .png"
+                        />
                       </div>
-                      Mis Actividades como Guía
+                      <div><span className="signup_email_valido">{pesoImgU}</span></div>
+                    </form>
+                  </div>
+                  <div className="col-md-8 text-start">
+                    <div className="card-body">
+                      <h3 className="card-title userhome_headers">Nombre:</h3>
+                      <p className="userhome_parrafos">
+                        {listaUsuarios.nombre} {listaUsuarios.apellidos}
+                      </p>
+                      <h3 className="card-title userhome_headers">Email:</h3>
+                      <p className="card-text userhome_parrafos">{listaUsuarios.email}</p>
+                      <h3 className="card-title userhome_headers">Ciudad:</h3>
+                      <p className="card-text userhome_parrafos">{listaUsuarios.ciudad}</p>
+                      <h3 className="card-title userhome_headers">Descripcion:</h3>
+                      <p className="card-text userhome_parrafos">{listaUsuarios.descripcion}</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div className="userhome_modifica_datos">
+              <div className="container row justify-content-center mb-3">
+                {listaUsuarios.tipo == 1 ? (
+                  <>
+                    <div className="col">
+                      <Link to={"/guia/" + userid}>
+                        <button className="userhome_home">
+                          <div className="userhome_iconos">
+                            <i className="fas fa-suitcase-rolling userhome_icono_default"></i>
+                            <i className="fas fa-plane-departure userhome_icono_hover"></i>
+                          </div>
+                          Mis Actividades como Guía
+                        </button>
+                      </Link>
+                    </div>
+                  </>
+                ) : (
+                  ""
+                )}
+                <div className="col">
+                  <Link to="/modifica_usuario">
+                    <button className="userhome_modifica">
+                      <div className="userhome_iconos">
+                        <i className="fas fa-home userhome_icono_default"></i>
+                        <i className="fas fa-pencil-alt userhome_icono_hover"></i>
+                      </div>
+                      Modificar perfil
                     </button>
                   </Link>
                 </div>
-              </>
-            ) : (
-              ""
-            )}
-            <div className="col">
-              <Link to="/modifica_usuario">
-                <button className="userhome_modifica">
-                  <div className="userhome_iconos">
-                    <i className="fas fa-home userhome_icono_default"></i>
-                    <i className="fas fa-pencil-alt userhome_icono_hover"></i>
-                  </div>
-                  Modificar perfil
-                </button>
-              </Link>
-            </div>
-          </div>
-          <div className="container row justify-content-center">
-            <div className="col">
-              <Link to={"/reservas/" + userid}>
-                <button className="userhome_reservas">
-                  <div className="userhome_iconos">
-                    <i className="fas fa-archway userhome_icono_default"></i>
-                    <i className="fas fa-wine-glass  userhome_icono_hover"></i>
-                  </div>
-                  Mis Reservas
-                </button>
-              </Link>
-            </div>
-            <div className="col">
-              <Link to="/baja_usuario">
-                <button className="userhome_baja">
-                  <div className="userhome_iconos">
-                    <i className="fas fa-frown userhome_icono_default"></i>
-                    <i className="fas fa-sad-cry  userhome_icono_hover"></i>
-                  </div>
-                  Darme de baja
-                </button>
-              </Link>
+              </div>
+              <div className="container row justify-content-center">
+                <div className="col">
+                  <Link to={"/reservas/" + userid}>
+                    <button className="userhome_reservas">
+                      <div className="userhome_iconos">
+                        <i className="fas fa-archway userhome_icono_default"></i>
+                        <i className="fas fa-wine-glass  userhome_icono_hover"></i>
+                      </div>
+                      Mis Reservas
+                    </button>
+                  </Link>
+                </div>
+                <div className="col">
+                  <Link to="/baja_usuario">
+                    <button className="userhome_baja">
+                      <div className="userhome_iconos">
+                        <i className="fas fa-frown userhome_icono_default"></i>
+                        <i className="fas fa-sad-cry  userhome_icono_hover"></i>
+                      </div>
+                      Darme de baja
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -12,16 +12,18 @@ a:hover{
     border:none
 }
 .cuerpo-guia-carta{
-    background-color: #FD841F;
+    background-color: #fdefbc;
 }
 .nombre-guia{
     font-size: 60px;
     font-weight: 900;
-    color:#9C2C77
+    color:#E14D2A;
+    text-transform: uppercase;
 }
 .descripcion-guia{
     font-size: 20px;
-    color: white;
+    color: black;
+    font-weight: 500;
 }
 .contenedor_boton_cambiar_foto{
     background-color:linear-gradient(to bottom, #9C2C77, rgba(201, 9, 89, 0.322));
@@ -33,7 +35,7 @@ a:hover{
 .texto_actividades{
     text-align: center;
     font-size: 60px;
-    color: #9C2C77;
+    color: #E14D2A;
     font-weight: 800;
 }
 .contenedor_boton_nueva_actividad{
@@ -41,7 +43,7 @@ a:hover{
 }
 /***************BOTON NUEVA ACTIVIDAD*************************/
 .boton_nueva_actividad {
-    background: linear-gradient(to bottom, #CD104D, rgba(223, 20, 131, 0.445));
+  background-image: linear-gradient(to bottom, #E14D2A, rgba(240, 115, 6, 0.473));
     padding: 20px 40px;
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
@@ -55,12 +57,12 @@ a:hover{
     display: inline-flex;
 	justify-content: center;
 	align-items: center;
-    border-color: #F09819;
+    border-color: #E14D2A;
     -moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
   }
   .boton_nueva_actividad:hover{
-    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.096) inset, 0px 0px 30px 0px #CD104D;
+    background-image: linear-gradient(to bottom, #FD841F, rgba(245, 169, 97, 0.322));
     transform: scale(1.2);
 }
   .boton_nueva_actividad span {
@@ -235,23 +237,25 @@ a:hover{
 
 /*TARJETAS DE ACTIVIDADES*/
 .tarjeta_actividad_body{
-    background-color: #FFE15D;
+    background-color: #fce38a;
 }
 .tarjeta_actividad_nombre{
     text-align: center;
     font-size: 30px;
     font-weight: 800;
-    color:#B01E68
+    color:#E14D2A;
+    text-transform: uppercase;
 }
 .tarjeta_actividad_texto{
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 800;
     color:#E14D2A;
 }
 .tarjeta_actividad_variable{
     font-size: 25px;
-    color: #9C2C77;
+    color: black;
+    font-weight: 800;
 }
 
 .guia_boton_modificar{

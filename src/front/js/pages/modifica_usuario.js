@@ -93,7 +93,7 @@ export const ModificaUsuario = () => {
     return (
       <div
         className="modifica_usuario_body"
-        style={{ backgroundImage: `url(${fondo4})`, backgroundSize: `cover` }}
+        style={{ backgroundColor:"#fdefbc" }}
       >
         <h1 className="bg-danger">No está autorizado</h1>
       </div>
@@ -103,7 +103,7 @@ export const ModificaUsuario = () => {
       <>
         <div
           className="modifica_usuario_body"
-          style={{ backgroundImage: `url(${fondo4})`, backgroundSize: `cover` }}
+          style={{ backgroundColor:"#fdefbc" }}
         >
           <div className="pb-4">
             <h1 className="modifica_usuario_header">Modifica tus datos</h1>
@@ -113,8 +113,7 @@ export const ModificaUsuario = () => {
             style={{
               height: "auto",
               maxWidth: "600px",
-              backgroundImage: `url(${fondo4})`,
-              backgroundSize: `cover`,
+              backgroundColor:"#fce38a"
             }}
           >
             <form

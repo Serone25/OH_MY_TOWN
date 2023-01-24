@@ -46,18 +46,19 @@ export const Login = () => {
   };
 
   return (
-    <div className="login-body" style={{ backgroundImage: `url(${fondo2})` }}>
+    <div className="login-body" style={{ backgroundColor:"#fdefbc" }}>
+      <h1 className="modificaActividad_header mb-4">Login</h1>
       <div
-        className="container login_espacio border border-white rounded px-0"
+        className="container login_espacio rounded px-0"
         style={{
           height: "auto",
-          width: "400px",
-          backgroundImage: `url(${fondo2})`,
+          width: "470px",
+          backgroundColor:"#fce38a",
         }}
       >
         <form className="login_form" onSubmit={handleSubmit(onSubmit)}>
           <h1 className="login_icon">
-            <FaUserCircle color="white" fontSize="2.5em" />
+            <FaUserCircle color="#E14D2A" fontSize="2.5em" />
           </h1>
           <div>
             <HCaptcha
@@ -100,7 +101,11 @@ export const Login = () => {
               </span>
             )}
           </div>
-          <button className="login_button" type="submit">
+          <button className="userhome_home mt-3" type="submit">
+            <div className="userhome_iconos">
+              <i className="fas fa fa-user userhome_icono_default"></i>
+              <i className="fas fa-check userhome_icono_hover"></i>
+            </div>
               Login
           </button>
           
@@ -108,13 +113,13 @@ export const Login = () => {
       </div>
       <div className="login_email">{store.message}</div>
       <div className="login_registro">
-        <p>
+        <p className="login_texto">
           Si no estás registrado pincha
           <Link to="/signup/">
             <span className="login_registro_link"> aquí</span>
           </Link>
         </p>
-        <p>
+        <p className="login_texto">
           Si no recuerdas tu contraseña pincha
           <Link to="/fpass/">
             <span className="login_registro_link"> aquí</span>

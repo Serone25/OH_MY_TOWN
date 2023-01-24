@@ -82,7 +82,7 @@ export const Actividades = (props) => {
   return (
     <div
       className="actividades_cuerpo"
-      style={{ backgroundImage: `url(${fondo2})` }}
+      style={{ backgroundColor:"#fce38a"}}
     >
       {actividades.foto ? (
         <img
@@ -95,14 +95,14 @@ export const Actividades = (props) => {
       )}
       <div className="container">
         <div className="row justify-content-evenly">
-          <div className="col-8">
+          <div className="col-8 actividades_espacio_actividades">
             <h1 className="display-5 mt-3 actividades_nombre">
               {actividades.nombre}
             </h1>
             <h3 className="actividad_ciudad">{actividades.ciudad}</h3>
             <h2 className="actividad_precio">{nwFecha}</h2>
             <h4 className="actividad_descripcion">{actividades.descripcion}</h4>
-            <h2 className="actividad_precio">{actividades.precio}</h2>
+            <h2 className="actividad_precio_precio"><span className="actividades_nombre_precio">PRECIO: </span>{actividades.precio}</h2>
           </div>
           <div className="col-4">
             <div className="espacio_reservas">

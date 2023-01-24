@@ -3,20 +3,20 @@
 }
 
 .rotulo_principal{
-    color: white;
+    color: #FD841F;
     text-align: center;
     font-size: 50px;
     font-weight: 700;
 }
 
 .rotulo_secundario{
-    color: white;
+    color: #FD841F;
     text-align: center;
     font-weight: 700;
 }
 
 .experiencias{
-    color: #9C2C77;
+    color: #E14D2A;
     font-size: 60px;
     font-weight: 900;
 }
@@ -26,21 +26,22 @@
 }
 
 .dudas{
-    color:#9C2C77;
+    color:#E14D2A;
     font-size: 35px;
     font-weight: 800;
 }
 .usuario_cabecera{
-    color: white;
+    color: #FD841F;
     text-align: center;
 }
 
 .usuario{
-    color:#9C2C77;
+    color:#E14D2A;
     font-weight: 800;
     font-size: 40px;
 }
 
 .texto_usuario p{
-    color: white;
+    color: black;
+    font-weight: 500;
 }

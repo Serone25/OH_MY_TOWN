@@ -17,7 +17,7 @@ export const Logout= () => {
     }, [])
 
     return (
-        <div className="logout_body" style={{ backgroundImage: `url(${fondo5})`,backgroundSize:`cover`}}>
+        <div className="logout_body" style={{ backgroundColor:"#fdefbc"}}>
             <div className="logout_header_contenedor">
                 <h1 className="logout_h1">HAS CERRADO SESIÓN</h1>
             </div>

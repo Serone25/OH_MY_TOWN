@@ -1,5 +1,5 @@
 .signup-body{
-  padding-top: 200px;
+  padding-top: 120px;
   text-align: center;
   height: 90vh;
   width: 100%;
@@ -10,15 +10,15 @@
 }
 
 .sign_up_encabezado{
-  color: white;
+  color: #E14D2A;
   padding-top: 25px;
-  font-size: 35px;
-  font-weight: 200;
-  letter-spacing: 2px;
+  font-size: 60px;
+  font-weight: 800;
   margin-bottom: 20px;
 
 }
 .signup_input{
+  width: 450px;
   margin-top: 20px;
   height:50px;
   text-align: center;
@@ -27,9 +27,10 @@
   border-style: none;
 }
 ::placeholder{
-  color:#9C2C77;
+  color:#E14D2A;
 }
 .signup_input_password{
+  width: 450px;
   height:50px;
   text-align: center;
   font-size: 25px;
@@ -41,7 +42,7 @@
   padding-left: 32px;
   padding-top: 35px;
   font-size: 25px;
-  color: #9C2C77;
+  color: #E14D2A;
 }
 .signup_email_valido{
   text-transform: uppercase;
@@ -57,14 +58,14 @@
   padding-left: 32px;
   padding-top: 12px;
   font-size: 25px;
-  color: #9C2C77;
+  color: #E14D2A;
 }
 .signup_icono_password_coincide{
   position: absolute;
   padding-left: 32px;
   padding-top: 32px;
   font-size: 25px;
-  color: #9C2C77;
+  color: #E14D2A;
 }
 .signup_password_coincide{
   font-size: 20px;

@@ -149,12 +149,12 @@ export const Guia = () => {
   }
 
   return (
-    <div className="guia-body" style={{ backgroundImage: `url(${fondo})` }}>
+    <div className="guia-body" style={{ backgroundColor:"#fdefbc" }}>
       <div className="container">
         <div className="container">
           <div className="card mb-5 guia_carta_contenedor">
             <div className="row g-0">
-              <div className="col-md-2">
+              <div className="col-md-4">
                 {guia.foto ? (
                   <img
                     src={process.env.BACKEND_URL + "/" + guia.foto}
@@ -171,7 +171,7 @@ export const Guia = () => {
                 {userid === params.theid ? (
                   <div
                     className="contenedor_boton_cambiar_foto"
-                    style={{ backgroundImage: `url(${fondo})` }}
+                    style={{backgroundColor:"#fdefbc"}}
                   >
                     <div
                       className="file-select boton_cambiar_foto"
@@ -195,7 +195,7 @@ export const Guia = () => {
                   ""
                 )}
               </div>
-              <div className="col-md-10 cuerpo-guia-carta">
+              <div className="col-md-8 cuerpo-guia-carta">
                 <div className="card-body">
                   <h1 className="card-title nombre-guia">{guia.nombre}</h1>
                   <p className="card-text descripcion-guia">
@@ -207,7 +207,6 @@ export const Guia = () => {
           </div>
         </div>
         <div className="">
-          <h3 className="texto_actividades mb-5">ACTIVIDADES</h3>
           {guia.tipo === 1 && userid === params.theid ? (
             <div className="mb-5 contenedor_boton_nueva_actividad">
               <Link to="/nueva_actividad">
@@ -252,7 +251,7 @@ export const Guia = () => {
                 <div className="card-body tarjeta_actividad_body">
                   <Link to={"/actividades/" + element.id}>
                     <h5 className="card-title tarjeta_actividad_nombre">
-                    {element.id} {element.nombre}
+                    {element.nombre}
                     </h5>
                   </Link>
                   <p className="card-text tarjeta_actividad_texto">
@@ -285,7 +284,7 @@ export const Guia = () => {
                         </Link>
                       </button>
                       <button
-                        className="col-4 mb-3 mx-auto mt-2 guia_boton_borrar"
+                        className="col-4 mb-3 mx-auto mt-2 guia_boton_modificar"
                         onClick={() => desactivaActividad(element.id)}
                       >
                         Borrar

@@ -9,40 +9,41 @@
     padding-bottom: 7vh;
 }
 .nueva_actividad_header{
-    color: #9C2C77; 
+    color: #E14D2A; 
     font-size: 60px; 
     font-weight: 800; 
     line-height: 60px; 
     margin: 0 0 16px;
 }
 .nueva_actividad_input{
+    width: 450px;
     height:50px;
     text-align: center;
     font-size: 25px;
     border-radius: 25px;
     border-style: none;
     margin-top: 10px;
-    color: #9C2C77;
+    color: #E14D2A;
 }
 .nueva_actividad_icono_nombre{
     position: absolute;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
     padding-left: 27px;
     padding-top: 22px;
 }
 .nuevaActividad_descripcion{
-    color: #9C2C77;
+    color: #E14D2A;
 }
 .nueva_actividad_icono_descripcion{
     position: absolute;
     font-size: 25px;
-    color: #9C2C77;
+    color: #E14D2A;
     padding-left: 5px;
     padding-top: 5px;
 }
 .nueva_actividad_fecha{
-    color: #9C2C77; 
+    color: #E14D2A; 
     font-size: 30px; 
     font-weight: 600;
 }
@@ -64,8 +65,8 @@
     top: 0;
     bottom: 0;
     box-shadow: 0px 0px 14px -7px #f09819;
-    background-color: #9C2C77;
-    background-image:linear-gradient(to bottom, #9C2C77, rgba(201, 9, 89, 0.322));
+    background-color:#E14D2A;
+    background-image: linear-gradient(to bottom, #E14D2A, rgba(240, 115, 6, 0.473));
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -83,7 +84,7 @@
 .nueva_actividad_boton_crear{
     position: relative;
     width: 80%;
-    background-image: linear-gradient(to bottom, #9C2C77, rgba(201, 9, 89, 0.322));
+    background-image: linear-gradient(to bottom, #E14D2A, rgba(240, 115, 6, 0.473));
     color: white;
     font-size: 30px;
     border:none;

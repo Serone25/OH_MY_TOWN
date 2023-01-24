@@ -22,7 +22,7 @@ export const CancelaReserva = (props) => {
   }, []);
 
   return (
-    <div className="cancela_reservas_body" style={{ backgroundImage: `url(${fondo3})`, backgroundSize: `cover` }}>
+    <div className="cancela_reservas_body" style={{ backgroundColor:"#fdefbc" }}>
       <h1 className="cancela_reservas_header">SU RESERVA HA SIDO CANCELADA CON ÉXITO</h1>
     </div>
   );

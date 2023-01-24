@@ -59,7 +59,7 @@ export const Search = () => {
 	}
 
 	return (
-		<div className="d-flex justify-content-center search_body" style={{ backgroundImage: `url(${fondo3})` }}>
+		<div className="d-flex justify-content-center search_body" style={{ backgroundColor:"#fce38a"}}>
 			<div className="barra_search">
 				<h1 className="barra_search_encabezado">¿ A <span className="barra_search_viajar">DÓNDE</span> VAS A <span className="barra_search_viajar">VIAJAR </span>?</h1>
 				<div className="containerInput container-fluid">
@@ -77,7 +77,7 @@ export const Search = () => {
       						<div className="card-body search_carta_body">
 								<div>
 									<h5 className="card-title search_h5">{element.nombre}</h5>
-									<p className="card-text"><i className="far fa-clock pe-2"></i>{element.fecha}</p>
+									<p className="card-text search_fecha"><i className="far fa-clock pe-2"></i>{element.fecha}</p>
 								</div>
       						</div>
 						<Link to={"/actividades/"+ element.id}>

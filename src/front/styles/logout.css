@@ -1,5 +1,5 @@
 .logout_body{
-    height: 100vh;
+    height: 90vh;
 }
 .logout_header_contenedor{
     display: flex;
@@ -10,10 +10,11 @@
 }
 .logout_h1{
     text-align: center;
-    font-size: 50px;
-    font-weight: 900;
-    background-image: linear-gradient(to right, #9C2C77, #CD104D);
+    font-size: 60px;
+    font-weight: 800;
+    background-image: linear-gradient(to right, #E14D2A, #FD841F);
     color: transparent;
+    line-height: 60px;
     background-clip: text;
     -webkit-background-clip: text;
     
@@ -26,7 +27,8 @@
 .logout_duele_h3{
     margin-bottom: 30px;
     font-size: 30px;
-    color: #FFF980;
+    font-weight: 700;
+    color: #FD841F;
 }
 .logout_img_contenedor{
     align-items: center;
@@ -39,6 +41,6 @@
 .logout_duele_h2{
     margin-top: 30px;
     font-size: 40px;
-    font-weight: 700;
-    color:#9C2C77;
+    font-weight: 800;
+    color:#E14D2A;
 }
