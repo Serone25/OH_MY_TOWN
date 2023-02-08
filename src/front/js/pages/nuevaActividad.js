@@ -94,7 +94,7 @@ export const NuevaActividad = () => {
 
   if (!token) {
     return (
-      <div className="nueva_actividad_body" style={{ backgroundColor:"#fce38a"}}>
+      <div className="nueva_actividad_body" style={{ backgroundColor:"#fdefbc"}}>
         <div className="pb-4">
             <h1 className="nueva_actividad_header">No está autorizado</h1>
           </div>
@@ -103,7 +103,7 @@ export const NuevaActividad = () => {
   } else {
     return (
       <>
-        <div className="nueva_actividad_body" style={{ backgroundColor:"#fce38a"}}>
+        <div className="nueva_actividad_body" style={{ backgroundColor:"#fdefbc"}}>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="pb-2">
               <h1 className="nueva_actividad_header">Nueva Actividad</h1>

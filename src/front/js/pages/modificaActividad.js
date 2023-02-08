@@ -120,22 +120,23 @@ export const ModificaActividad = () => {
 
   if (!token) {
     return (
-      <div className="modificaActividad_body" style={{ backgroundColor:"#fce38a"}}>
+      <div className="modificaActividad_body" style={{ backgroundColor:"#fdefbc"}}>
         <h1 className="bg-danger">No está autorizado</h1>
       </div>
     );
   } else {
     return (
       <>
-        <div className="modificaActividad_body" style={{ backgroundColor:"#fce38a"}}>
+        <div className="modificaActividad_body" style={{ backgroundColor:"#fdefbc"}}>
           <form className="modificaActividad_formulario" onSubmit={handleSubmit(onSubmit)}>
             <h1 className="modificaActividad_header">¡Modifica tu actividad!</h1>
             {dataActividad.ids_usuarios !== "" ? (
               <>
               <br></br>
-                <h6>La actividad tiene reservas</h6>
-                <div>
-                  <input
+                <h6 className="modificaActividad_tieneReservas">La actividad tiene reservas</h6>
+                <div className="modificaActividad_nombre mb-3">
+                  <i className="fas fa-building modificaActividad_icono_nombre"></i>
+                  <input className="modificaActividad_input"
                     id="nombre"
                     type="text"
                     defaultValue={
@@ -150,8 +151,9 @@ export const ModificaActividad = () => {
                     </span>
                   )}
                 </div>
-                <div>
-                  <textarea
+                <div className="nuevoComentario_comentario">
+                  <i className="fas fa-comment modificaActividad_icono_descripcion"></i>
+                  <textarea className="ps-5" rows="10" cols="40"
                     defaultValue={
                       dataActividad.descripcion ? dataActividad.descripcion : ""
                     }

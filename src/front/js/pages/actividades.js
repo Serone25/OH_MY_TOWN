@@ -82,7 +82,7 @@ export const Actividades = (props) => {
   return (
     <div
       className="actividades_cuerpo"
-      style={{ backgroundColor:"#fce38a"}}
+      style={{ backgroundColor:"#fdefbc"}}
     >
       {actividades.foto ? (
         <img
@@ -94,8 +94,8 @@ export const Actividades = (props) => {
         <img src={retiro} className="actividades_imagen_actividad_header" alt="..." />
       )}
       <div className="container">
-        <div className="row justify-content-evenly">
-          <div className="col-8 actividades_espacio_actividades">
+        <div className="justify-content-center">
+          <div className="col actividades_espacio_actividades">
             <h1 className="display-5 mt-3 actividades_nombre">
               {actividades.nombre}
             </h1>
@@ -104,7 +104,7 @@ export const Actividades = (props) => {
             <h4 className="actividad_descripcion">{actividades.descripcion}</h4>
             <h2 className="actividad_precio_precio"><span className="actividades_nombre_precio">PRECIO: </span>{actividades.precio}</h2>
           </div>
-          <div className="col-4">
+          <div className="col">
             <div className="espacio_reservas">
               {actividades.id_guia != userid &&
               userid &&
@@ -194,23 +194,29 @@ export const Actividades = (props) => {
           {actividades.obj_com.map((element) =>
             element.estado !== 2 ? (
               <div key={element.id} className="card tarjeta_comentarios mt-2">
-                {actividades.foto ? (
-                  <img
-                    src={process.env.BACKEND_URL + "/" + actividades.foto}
-                    className="card-img-top img-fluid"
-                    alt="..."
-                  />
-                ) : (
-                  <img
-                    src={opinion1}
-                    className="card-img-top img-fluid"
-                    alt="..."
-                  />
-                )}
-                <div className="card-body">
-                  <p className="card-text tarjeta_comentarios_comentario">
-                    {element.texto}
-                  </p>
+                <div className="row g-0">
+                  <div className="col">
+                    {actividades.foto ? (
+                      <img
+                        src={process.env.BACKEND_URL + "/" + actividades.foto}
+                        className="card-img-top"
+                        alt="..."
+                      />
+                    ) : (
+                      <img
+                        src={opinion1}
+                        className="card-img-top"
+                        alt="..."
+                      />
+                    )}
+                  </div>
+                    <div className="col-md-10">
+                      <div className="card-body">
+                        <p className="card-text tarjeta_comentarios_comentario">
+                          {element.texto}
+                        </p>
+                      </div>
+                    </div>
                 </div>
               </div>
             ) : (

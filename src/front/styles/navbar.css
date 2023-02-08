@@ -16,7 +16,7 @@
 }
 
 .stickyheader {
-    background-color: rgba(253, 132, 31, 0.5);
+    background-color: rgba(253, 131, 31, 0.4);
     z-index: 9999;
     border-bottom: 1px solid transparent;
 }

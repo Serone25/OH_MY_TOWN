@@ -59,7 +59,7 @@ export const Search = () => {
 	}
 
 	return (
-		<div className="d-flex justify-content-center search_body" style={{ backgroundColor:"#fce38a"}}>
+		<div className="d-flex justify-content-center search_body" style={{ backgroundColor:"#fdefbc"}}>
 			<div className="barra_search">
 				<h1 className="barra_search_encabezado">¿ A <span className="barra_search_viajar">DÓNDE</span> VAS A <span className="barra_search_viajar">VIAJAR </span>?</h1>
 				<div className="containerInput container-fluid">

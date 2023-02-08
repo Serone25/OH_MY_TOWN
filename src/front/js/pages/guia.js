@@ -255,19 +255,19 @@ export const Guia = () => {
                     </h5>
                   </Link>
                   <p className="card-text tarjeta_actividad_texto">
-                    CIUDAD:{" "}
+                    {" "}
                     <span className="tarjeta_actividad_variable">
                       {element.ciudad}
                     </span>
                   </p>
                   <p className="card-text tarjeta_actividad_texto">
-                    PRECIO:{" "}
+                    {" "}
                     <span className="tarjeta_actividad_variable">
                       {element.precio}
                     </span>
                   </p>
                   <p className="card-text tarjeta_actividad_texto">
-                    Fecha:{" "}
+                    {" "}
                     <span className="tarjeta_actividad_variable">
                       {parseFecha(element.fecha)}
                     </span>
@@ -290,7 +290,7 @@ export const Guia = () => {
                         Borrar
                       </button>
                       {element.ids_usuarios != "" ? (
-                        <span className="contiene_reservas">
+                        <span className="mb-2 contiene_reservas">
                           Esta actividad está reservada
                         </span>
                       ) : (

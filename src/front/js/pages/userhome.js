@@ -124,7 +124,7 @@ export const UserHome = () => {
                       />
                     )}
                     <form>
-                      <div className="file-select" id="src-file1">
+                      <div className="boton_cambiar_foto file-select" id="src-file1">
                         <input
                           onChange={() => {
                             subeFotoUsr(handleSubmit);
